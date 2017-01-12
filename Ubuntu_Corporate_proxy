@@ -1,0 +1,16 @@
+To set apt working 
+  goto -->
+    /etc/apt/apt.conf.d and create a file called proxy.conf and enter the below lines in it..
+    Acquire::http::Proxy "http://host:port";
+    Acquire::https::Proxy "http://host:port";
+    Acquire::ftp::Proxy "http://host:port";
+    
+  to get wget working
+    goto --> 
+        /etc/wgetrc --> wgetrc is file and open it edit proxy settings
+          https_proxy = http://host:port
+          http_proxy = http://host:port
+          ftp_proxy = http://host:port
+        uncomment use proxy  --> #use_proxy = on  to  use_proxy = on
+        
+  
